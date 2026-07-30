@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.bdsqltester.scenes.user.AddressController"
+            style="-fx-background-color: #FFFFFF;">
+
+    <children>
+
+        <Label layoutX="215.0" layoutY="80.0" text="Insert your address"
+               style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2EC4B6; -fx-font-family: 'Segoe UI';"/>
+
+
+        <GridPane alignment="TOP_RIGHT" hgap="8.0" layoutX="156.0" layoutY="130.0" prefHeight="180.0" prefWidth="290.0"
+                  style="-fx-background-color: #CBF3F0; -fx-background-radius: 10; -fx-padding: 15;">
+            <columnConstraints>
+                <ColumnConstraints prefWidth="95.0"/>
+                <ColumnConstraints prefWidth="170.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints prefHeight="30.0"/>
+                <RowConstraints prefHeight="30.0"/>
+                <RowConstraints prefHeight="30.0"/>
+                <RowConstraints prefHeight="30.0"/>
+            </rowConstraints>
+
+            <children>
+                <Label text="Alamat:" GridPane.halignment="RIGHT" GridPane.rowIndex="0"
+                       style="-fx-text-fill: #2EC4B6; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+                <TextField fx:id="alamatField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                <Label text="Kota:" GridPane.halignment="RIGHT" GridPane.rowIndex="1"
+                       style="-fx-text-fill: #2EC4B6; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+                <TextField fx:id="kotaField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <Label text="Provinsi:" GridPane.halignment="RIGHT" GridPane.rowIndex="2"
+                       style="-fx-text-fill: #2EC4B6; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+                <TextField fx:id="provinsiField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                <Label text="Kode Pos:" GridPane.halignment="RIGHT" GridPane.rowIndex="3"
+                       style="-fx-text-fill: #2EC4B6; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+                <TextField fx:id="kodePosField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            </children>
+        </GridPane>
+
+
+        <Button layoutX="252.0" layoutY="330.0" text="Continue" onAction="#onContinueClick"
+                style="-fx-background-color: #FF9F1C; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-font-family: 'Segoe UI';"/>
+    </children>
+</AnchorPane>

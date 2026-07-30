@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.bdsqltester.scenes.adminPusat.centralViewbController"
+            style="-fx-background-color: #FFFFFF;">
+
+    <VBox spacing="10.0"
+          AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0"
+          AnchorPane.topAnchor="0.0">
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        </padding>
+
+        <Text style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-fill: #2EC4B6; -fx-font-family: 'Segoe UI';" text="Informasi Cabang"/>
+
+        <HBox spacing="10.0">
+            <Label text="Nama Cabang:" style="-fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+            <Label fx:id="labelNamaCabang" style="-fx-font-family: 'Segoe UI';"/>
+        </HBox>
+
+        <HBox spacing="10.0">
+            <Label text="Alamat Cabang:" style="-fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+            <Label fx:id="labelAlamatCabang" style="-fx-font-family: 'Segoe UI';"/>
+        </HBox>
+
+        <Separator/>
+
+        <HBox spacing="10.0">
+            <Button onAction="#handleDiskon" text="Diskon"
+                    style="-fx-background-color: #FF9F1C; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+            <Button onAction="#handleHapusDiskon" text="Hapus Diskon"
+                    style="-fx-background-color: #FF9F1C; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+            <Region fx:id="spacer" HBox.hgrow="ALWAYS"/>
+            <Button onAction="#handleLaporan" text="Laporan"
+                    style="-fx-background-color: #FF9F1C; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+        </HBox>
+
+        <Separator/>
+
+        <HBox alignment="TOP_LEFT" spacing="40.0">
+
+            <VBox spacing="10.0">
+                <Text style="-fx-font-weight: bold; -fx-font-family: 'Segoe UI';" text="Pesanan"/>
+                <HBox spacing="10.0">
+                    <Label text="Filter tanggal:" style="-fx-font-family: 'Segoe UI';"/>
+                    <DatePicker fx:id="dateFilter"/>
+                    <Button onAction="#handleTampilkanPesanan" text="Tampilkan"
+                            style="-fx-background-color: #FF9F1C; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+                </HBox>
+                <TableView fx:id="tablePesanan" prefHeight="200.0" prefWidth="400.0"
+                           style="-fx-font-family: 'Segoe UI'; -fx-font-size: 13px;">
+                    <columns>
+                        <TableColumn fx:id="colPesananId" prefWidth="50.0" text="ID"/>
+                        <TableColumn fx:id="colPesananTanggal" prefWidth="100.0" text="Tanggal"/>
+                        <TableColumn fx:id="colPesananJam" prefWidth="100.0" text="Jam"/>
+                        <TableColumn fx:id="colPesananTotal" prefWidth="100.0" text="Total"/>
+                    </columns>
+                </TableView>
+            </VBox>
+
+            <VBox spacing="10.0">
+                <Text style="-fx-font-weight: bold; -fx-font-family: 'Segoe UI';" text="Daftar Admin"/>
+                <Button alignment="CENTER_LEFT" onAction="#handleTambahAdmin" text="Tambah Admin"
+                        style="-fx-background-color: #FF9F1C; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+                <TableView fx:id="tableAdmin" prefHeight="200.0" prefWidth="750.0"
+                           style="-fx-font-family: 'Segoe UI'; -fx-font-size: 13px;">
+                    <columns>
+                        <TableColumn fx:id="colAdminNama" prefWidth="150.0" text="Nama"/>
+                        <TableColumn fx:id="colAdminEmail" prefWidth="200.0" text="Email"/>
+                        <TableColumn fx:id="colAdminNotelp" prefWidth="120.0" text="No Telp"/>
+                        <TableColumn fx:id="colAdminPassword" prefWidth="120.0" text="Password"/>
+                        <TableColumn fx:id="colAdminTanggal" prefWidth="120.0" text="Tanggal Masuk"/>
+                        <TableColumn fx:id="colAdminGaji" prefWidth="80.0" text="Gaji"/>
+                        <TableColumn fx:id="colAdminRole" prefWidth="70.0" text="Role ID"/>
+                        <TableColumn fx:id="colAdminCabang" prefWidth="90.0" text="Cabang ID"/>
+                        <TableColumn fx:id="colAdminAksi" prefWidth="100.0" text="Aksi"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </HBox>
+    </VBox>
+</AnchorPane>

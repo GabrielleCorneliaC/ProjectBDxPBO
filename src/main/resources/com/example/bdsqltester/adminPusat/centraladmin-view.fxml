@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0"
+            style="-fx-background-color:#FFFFFF;"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.bdsqltester.scenes.adminPusat.pusatController">
+
+    <children>
+        <TableView fx:id="cabang_table" layoutX="27.0" layoutY="89.0"
+                   prefHeight="272.0" prefWidth="542.0"
+                   style="-fx-font-family:'Segoe UI'; -fx-font-size:13px;">
+            <columns>
+                <TableColumn fx:id="cabangName"  prefWidth="180.0" text="Nama Cabang"/>
+                <TableColumn fx:id="reviewButton" prefWidth="160.0" text="Review"/>
+                <TableColumn fx:id="actionButton" prefWidth="180.0" text="Status"/>
+            </columns>
+        </TableView>
+
+        <HBox layoutX="27.0" layoutY="377.0" spacing="10.0">
+            <Button text="Add Cabang"   onAction="#handleAddCabang"
+                    style="-fx-background-color:#FF9F1C;-fx-text-fill:white;-fx-font-weight:bold;-fx-background-radius:6;"/>
+            <Button text="Edit Cabang"  onAction="#handleEditCabang"
+                    style="-fx-background-color:#FF9F1C;-fx-text-fill:white;-fx-font-weight:bold;-fx-background-radius:6;"/>
+        </HBox>
+    </children>
+</AnchorPane>

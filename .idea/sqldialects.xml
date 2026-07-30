@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/main/java/com/example/bdsqltester/scenes/adminCabang/JadwalController.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/example/bdsqltester/scenes/adminCabang/MenuAdmincController.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/example/bdsqltester/scenes/adminCabang/ProcessOrderController.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/example/bdsqltester/scenes/adminPusat/LaporanController.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/example/bdsqltester/scenes/adminPusat/centralViewbController.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/example/bdsqltester/scenes/adminPusat/pusatController.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/example/bdsqltester/scenes/user/CheckoutController.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/example/bdsqltester/scenes/user/SignupController.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/example/bdsqltester/scenes/user/historyController.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/example/bdsqltester/scenes/user/orderController.java" dialect="GenericSQL" />
+  </component>
+</project>

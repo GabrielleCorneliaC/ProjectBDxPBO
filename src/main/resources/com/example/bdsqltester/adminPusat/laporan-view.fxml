@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:controller="com.example.bdsqltester.scenes.adminPusat.LaporanController"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="600.0" prefHeight="380.0"
+            style="-fx-background-color:#FFFFFF;">
+
+
+    <VBox fx:id="rootBox" spacing="15"
+          AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20"
+          AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20">
+
+
+        <Text text="Laporan Cabang"
+              style="
+                  -fx-font-size:24px;
+                  -fx-font-weight:bold;
+                  -fx-fill:#2EC4B6;
+                  -fx-font-family:'Segoe UI','Arial';
+              " />
+
+        <HBox spacing="10">
+            <Label text="Nama Cabang:"
+                   style="-fx-font-weight:bold; -fx-font-family:'Segoe UI';" />
+            <Label fx:id="labelNamaCabang"
+                   style="-fx-font-family:'Segoe UI';" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Alamat:"
+                   style="-fx-font-weight:bold; -fx-font-family:'Segoe UI';" />
+            <Label fx:id="labelAlamatCabang"
+                   style="-fx-font-family:'Segoe UI';" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Total Transaksi Hari Ini:"
+                   style="-fx-font-weight:bold; -fx-font-family:'Segoe UI';" />
+            <Label fx:id="labelTotalTransaksi"
+                   style="-fx-font-family:'Segoe UI';" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Menu Terlaris:"
+                   style="-fx-font-weight:bold; -fx-font-family:'Segoe UI';" />
+            <Label fx:id="labelMenuTerlaris"
+                   style="-fx-font-family:'Segoe UI';" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Diskon Aktif:"
+                   style="-fx-font-weight:bold; -fx-font-family:'Segoe UI';" />
+            <Label fx:id="labelDiskon"
+                   style="-fx-font-family:'Segoe UI';" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Rating Rata‑rata:"
+                   style="-fx-font-weight:bold; -fx-font-family:'Segoe UI';" />
+            <Label fx:id="labelRating"
+                   style="-fx-font-family:'Segoe UI';" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Admin Terbaru:"
+                   style="-fx-font-weight:bold; -fx-font-family:'Segoe UI';" />
+            <Label fx:id="labelAdminTerbaru"
+                   style="-fx-font-family:'Segoe UI';" />
+        </HBox>
+
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+    </VBox>
+</AnchorPane>

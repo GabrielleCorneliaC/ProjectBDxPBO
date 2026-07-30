@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="440.0" prefWidth="443.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bdsqltester.scenes.user.orderController">
+
+
+    <ChoiceBox fx:id="cabangChoice" layoutX="22.0" layoutY="26.0" prefHeight="26.0" prefWidth="122.0" style="-fx-background-color: #2EC4B6; -fx-mark-color: white; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';" />
+
+
+    <ChoiceBox fx:id="kategoriChoice" layoutX="160.0" layoutY="26.0" prefHeight="26.0" prefWidth="122.0" style="-fx-background-color: #2EC4B6; -fx-mark-color: white; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';" />
+
+
+    <VBox layoutY="52.0" prefHeight="438.0" prefWidth="442.0" spacing="10" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="52.0">
+
+        <padding>
+            <Insets bottom="20" left="20" right="20" top="20" />
+        </padding>
+
+
+        <ScrollPane fitToWidth="true" prefHeight="250" prefWidth="100">
+            <VBox fx:id="menuContainer" spacing="10" style="-fx-background-color: #CBF3F0; -fx-padding: 10; -fx-background-radius: 8;">
+                <padding>
+                    <Insets bottom="10" left="10" right="10" top="10" />
+                </padding>
+            </VBox>
+        </ScrollPane>
+
+
+        <Button fx:id="btnSubmit" style="-fx-background-color: #FF9F1C; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-font-family: 'Segoe UI';" text="Submit Pesanan" />
+
+
+        <TableView fx:id="tableOrder" prefHeight="200" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 13px; -fx-background-color: #FFFFFF;">
+            <columns>
+                <TableColumn fx:id="colMenu" prefWidth="150" text="Menu" />
+                <TableColumn fx:id="colHarga" prefWidth="150" text="Harga" />
+                <TableColumn fx:id="colJumlah" prefWidth="100" text="Jumlah" />
+            </columns>
+        </TableView>
+
+
+        <Label fx:id="lblTotal" style="-fx-font-weight: bold; -fx-text-fill: #2EC4B6; -fx-font-size: 14px; -fx-font-family: 'Segoe UI';" text="Total: Rp 0" />
+
+
+        <Button mnemonicParsing="false" onAction="#continueClick" style="-fx-background-color: #FF9F1C; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-font-family: 'Segoe UI';" text="Continue" />
+    </VBox>
+   <Button fx:id="historyButton" layoutX="329.0" layoutY="27.0" onAction="#onHistoryClick" style="-fx-background-color: #FF9F1C; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-font-family: 'Segoe UI';" text="Lihat Riwayat" />
+</AnchorPane>

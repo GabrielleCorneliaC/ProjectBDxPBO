@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="381.0" prefWidth="528.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bdsqltester.scenes.adminCabang.MenuAdmincController">
+    <children>
+        <fx:include fx:id="navbar" source="adminCabangNavbar.fxml" />
+
+        <VBox layoutX="-6.0" layoutY="38.0" prefHeight="346.0" prefWidth="534.0" spacing="20" style="-fx-padding: 20;">
+            <children>
+                <TableView fx:id="menuTable" prefHeight="210.0" prefWidth="480.0" style="-fx-background-radius: 10;">
+                    <columns>
+                        <TableColumn fx:id="menuIdColumn" prefWidth="50.0" text="ID" />
+                        <TableColumn fx:id="menuNamaColumn" prefWidth="204.8" text="Nama Menu" />
+                        <TableColumn fx:id="menuHargaColumn" prefWidth="112.8" text="Harga Asli" />
+                        <TableColumn fx:id="menuStokColumn" prefWidth="124.8" text="Stock" />
+                    </columns>
+                </TableView>
+
+                <HBox spacing="10">
+                    <children>
+                        <TextField fx:id="namaField" prefWidth="140.0" promptText="Nama Menu" style="-fx-background-radius: 8; -fx-border-color: #2EC4B6; -fx-border-radius: 8;" />
+                        <TextField fx:id="hargaField" prefWidth="120.0" promptText="Harga (Angka)" style="-fx-background-radius: 8; -fx-border-color: #2EC4B6; -fx-border-radius: 8;" />
+                        <Button onAction="#addMenu" style="-fx-background-color: #FF9F1C; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10; -fx-font-family: 'Segoe UI'; -fx-cursor: hand;" text="Add" />
+                        <Button onAction="#updateMenu" style="-fx-background-color: #FF9F1C; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10; -fx-font-family: 'Segoe UI'; -fx-cursor: hand;" text="Update" />
+                        <Button fx:id="btnStatus" text="Aktifkan" visible="false" onAction="#toggleStatusMenu"
+                                style="-fx-background-color: #FF9F1C; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10; -fx-font-family: 'Segoe UI'; -fx-cursor: hand;" />
+                    </children>
+                </HBox>
+
+                <HBox spacing="10">
+                    <children>
+                        <ChoiceBox fx:id="kategoriDropdown" prefWidth="140.0"
+                                   style="-fx-background-color: #2EC4B6; -fx-mark-color: white; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8;" />
+                        <TextField fx:id="stokField" prefWidth="120.0" promptText="Stock (Angka)" style="-fx-background-radius: 8; -fx-border-color: #2EC4B6; -fx-border-radius: 8;" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
